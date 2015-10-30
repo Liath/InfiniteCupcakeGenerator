@@ -1,0 +1,10 @@
+* text eol=crlf
+
+*.cpp text eol=crlf
+*.h text eol=crlf
+*.md text eol=crlf
+*.rc textv eol=crlf
+
+*.bmp binary
+*.ttf binary
+*.xm binary

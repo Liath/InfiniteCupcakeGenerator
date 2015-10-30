@@ -1,8 +1,9 @@
-Need a swanky keygen skin? I didn't! But I made one anyways. Feel free to use it anywhere you so choose.
+####Introduction
+Need a swanky keygen template? I didn't!(and no I don't need one) But I made it anyways so feel free to use it anywhere you so choose.
 
 Ignore the current crypto codes, they are crippled versions from some research elsewhere that are here as examples.
 
-######How I compile with the VS-13 cli tools
+####How I compile with the VS-13 cli tools
 ```
 cl /c /O1 /GS- /Oi- /Og /Os /Oy /Gy /EHs-c- ICG.cpp
 
@@ -12,3 +13,8 @@ link /SUBSYSTEM:WINDOWS /NODEFAULTLIB /SAFESEH:NO /ENTRY:"winMainCRTStartup" /OU
 
 upx --ultra-brute icg.exe
 ```
+
+####References (As I remember the particularly useful ones):
+[CodeProject: How to Use a Font Without Installing it by Shao Voon Wong](http://www.codeproject.com/Articles/42041/How-to-Use-a-Font-Without-Installing-it)
+[StackOverflow: Transparency in GDI DCs answer by Remy Lebeau](http://stackoverflow.com/questions/28846219/transparency-in-gdi-dcs)
+[DaFont: Dimitri Swank by Fontalicious](http://www.dafont.com/dimitri.font)

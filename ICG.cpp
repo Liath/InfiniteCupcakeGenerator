@@ -200,15 +200,12 @@ static int wW = 320;
 static HBITMAP* getPinkie(int i) {
 	return (HBITMAP*)LoadBitmap(hInst, MAKEINTRESOURCE(i + 108));
 }
-HANDLE AddResourceFont(char* ResID, DWORD *Installed)
+HANDLE AddResourceFont(char* ResID)
 {
+	HRSRC Resource = FindResourceA(hInst, ResID, "Binary");
 	DWORD Count = 0;
-	char* type = "RT_FONT";
-	HRSRC Resource = FindResourceA(hInst, ResID, type);
 	if (Resource) {
-		LoadResource(hInst, Resource);
-		LockResource(Resource);
-		return AddFontMemResourceEx(Resource, SizeofResource(hInst, Resource), 0, &Count);
+		return AddFontMemResourceEx(LockResource(LoadResource(hInst, Resource)), SizeofResource(hInst, Resource), NULL, &Count);
 	}
 	return false;
 }
@@ -352,7 +349,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg,
 		DeleteObject(hfDefault);
 
 		//Load Dimitri from Res and set it up
-		AddResourceFont(MAKEINTRESOURCEA(IDR_RT_FONT1), NULL);
+		AddResourceFont(MAKEINTRESOURCEA(IDR_FONT));
 		//-13,0,0,0,400,0,0,0,0,3,2,1,2,Dimitri Swank
 		logfont.lfCharSet = DEFAULT_CHARSET;
 		logfont.lfClipPrecision = CLIP_DEFAULT_PRECIS;

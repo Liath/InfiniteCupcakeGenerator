@@ -3,6 +3,7 @@ Need a swanky keygen template? I didn't!(and no I don't need one) But I made it 
 
 Ignore the current crypto codes, they are crippled versions from some research elsewhere that are here as examples.
 
+I have no idea how uFMOD is licensed so it's not included here. [You can grab it here though.](http://ufmod.sourceforge.net/) You'll need to place ufmod.lib and winmm.lib in this folder to compile.
 ####How I compile with the VS-13 cli tools
 ```
 cl /c /O1 /GS- /Oi- /Og /Os /Oy /Gy /EHs-c- ICG.cpp

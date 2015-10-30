@@ -15,6 +15,6 @@ upx --ultra-brute icg.exe
 ```
 
 ####References (As I remember the particularly useful ones):
-[CodeProject: How to Use a Font Without Installing it by Shao Voon Wong](http://www.codeproject.com/Articles/42041/How-to-Use-a-Font-Without-Installing-it)
-[StackOverflow: Transparency in GDI DCs answer by Remy Lebeau](http://stackoverflow.com/questions/28846219/transparency-in-gdi-dcs)
-[DaFont: Dimitri Swank by Fontalicious](http://www.dafont.com/dimitri.font)
+* [CodeProject: How to Use a Font Without Installing it by Shao Voon Wong](http://www.codeproject.com/Articles/42041/How-to-Use-a-Font-Without-Installing-it)
+* [StackOverflow: Transparency in GDI DCs answer by Remy Lebeau](http://stackoverflow.com/questions/28846219/transparency-in-gdi-dcs)
+* [DaFont: Dimitri Swank by Fontalicious](http://www.dafont.com/dimitri.font)

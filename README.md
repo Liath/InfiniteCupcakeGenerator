@@ -1,19 +1,20 @@
+![Infinite Cupcake Generator preview (The keygen looks Pinkie Pie from MLP:FiM dancing on top of some serial numbers)](https://raw.githubusercontent.com/liath/infinitecupcakegenerator/master/preview.gif)
+
 #### Introduction
 Need a swanky keygen template? I didn't! But I made it anyways so feel free to use it.
 
 Ignore the current crypto codes, they are crippled versions from some research elsewhere that are here as examples.
 
-I have no idea how uFMOD is licensed so it's not included. You'll have to grab it from [here](http://ufmod.sourceforge.net/) and then place `ufmod.lib` and `winmm.lib` in this folder.
 #### Compiling
-With the VS-13 cli tools:
+Docker is easiest but this requires Windows mode:
+```powershell
+docker build -t build_icg:latest -m 2GB .
+docker run --rm -v ${PWD}:C:\build build_icg
 ```
-cl /c /O1 /GS- /Oi- /Og /Os /Oy /Gy /EHs-c- ICG.cpp
-rc /r ICG.rc
-link /SUBSYSTEM:WINDOWS /NODEFAULTLIB /SAFESEH:NO /ENTRY:"winMainCRTStartup" /OUT:icg.exe ICG.obj Kernel32.lib Ws2_32.lib Gdi32.lib User32.lib winmm.lib ufmod.lib ICG.res /INCREMENTAL:NO /FILEALIGN:512 /ALIGN:4096 /OPT:REF
-upx --ultra-brute icg.exe
-```
+You could also pollute your environment and run the steps in the Dockerfile and build.ps1 yourself but I'm not a fan of that personally. :)
 
 #### References
 * [CodeProject: How to Use a Font Without Installing it by Shao Voon Wong](http://www.codeproject.com/Articles/42041/How-to-Use-a-Font-Without-Installing-it)
 * [StackOverflow: Transparency in GDI DCs answer by Remy Lebeau](http://stackoverflow.com/questions/28846219/transparency-in-gdi-dcs)
 * [DaFont: Dimitri Swank by Fontalicious](http://www.dafont.com/dimitri.font)
+* [Deathpwny for the GIF](https://www.deviantart.com/deathpwny/art/Pinkie-Pie-dancing-258855912)
